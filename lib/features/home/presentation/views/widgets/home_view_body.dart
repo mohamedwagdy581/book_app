@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/utils/styles.dart';
+import 'best_seller_listview_item.dart';
 import 'custom_app_bar.dart';
 import 'featured_list_view.dart';
 
@@ -10,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Padding(
-      padding: EdgeInsets.only(left: 24.0),
+      padding: EdgeInsets.only(left: 30.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -19,9 +21,14 @@ class HomeViewBody extends StatelessWidget {
           SizedBox(
             height: 50,
           ),
-          Text('Best Seller', style: Styles.titleMedium,),
+          Text('Best Seller', style: Styles.textStyle18,),
+          SizedBox(
+            height: 20,
+          ),
+          BestSellerListViewItem(),
         ],
       ),
     );
   }
 }
+
